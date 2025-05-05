@@ -2,7 +2,7 @@
 using System.Net;
 using System.Text.RegularExpressions;
 
-namespace Vrelk.Libs.Types.Net;
+namespace Vrelk.Libs.IP;
 
 /// <summary>
 /// Represents an IP subnet and provides methods to work with subnet-related operations.

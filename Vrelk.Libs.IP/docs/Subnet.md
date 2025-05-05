@@ -7,7 +7,7 @@ The `Subnet` class provides a robust implementation for working with IP subnets 
 ## Namespace
 
 ```csharp
-namespace Vrelk.Libs.Types.Net;
+namespace Vrelk.Libs.IP;
 ```
 
 ## Class Definition
@@ -231,7 +231,7 @@ Console.WriteLine(subnet.ToString()); // Outputs: 192.168.1.0/24
 
 ```csharp
 using System;
-using Vrelk.Libs.Types.Net;
+using Vrelk.Libs.IP;
 
 class Program
 {

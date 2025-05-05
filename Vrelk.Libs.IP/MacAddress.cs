@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Vrelk.Libs.Types.Net;
+namespace Vrelk.Libs.IP;
 
 /// <summary>
 /// A class that handles MAC addresses in various formats

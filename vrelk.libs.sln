@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrelk.Libs.Types", "Vrelk.Libs.Types\Vrelk.Libs.Types.csproj", "{1B7221C4-1984-4D56-A5FF-75CB289987FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrelk.Libs.IP", "Vrelk.Libs.IP\Vrelk.Libs.IP.csproj", "{C7D57417-865C-49DB-AD49-1316666CCB1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19A39A84-0BCC-4698-80D0-487061A1F590}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{9A73421E-1366-4538-86A9-D11120B0DEBD}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.yml = nuget.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +21,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1B7221C4-1984-4D56-A5FF-75CB289987FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B7221C4-1984-4D56-A5FF-75CB289987FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B7221C4-1984-4D56-A5FF-75CB289987FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B7221C4-1984-4D56-A5FF-75CB289987FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7D57417-865C-49DB-AD49-1316666CCB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D57417-865C-49DB-AD49-1316666CCB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D57417-865C-49DB-AD49-1316666CCB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D57417-865C-49DB-AD49-1316666CCB1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A73421E-1366-4538-86A9-D11120B0DEBD} = {19A39A84-0BCC-4698-80D0-487061A1F590}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50296EB8-6055-4554-BA86-04760FDBF5F2}

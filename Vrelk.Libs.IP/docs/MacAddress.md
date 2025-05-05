@@ -7,7 +7,7 @@ The `MacAddress` class provides comprehensive functionality for handling MAC (Me
 ## Namespace
 
 ```csharp
-namespace Vrelk.Libs.Types.Net;
+namespace Vrelk.Libs.IP;
 ```
 
 ## Class Definition
@@ -163,7 +163,7 @@ The `MacAddress` class can parse MAC addresses in any of the following formats:
 
 ```csharp
 using System;
-using Vrelk.Libs.Types.Net;
+using Vrelk.Libs.IP;
 
 class Program
 {
