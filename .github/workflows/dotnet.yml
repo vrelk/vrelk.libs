@@ -1,0 +1,38 @@
+name: Build and Publish NuGet Packages
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [closed]
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    name: Build and Update
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+
+      - name: Setup .NET Core @ Latest
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: |
+            8.x
+          source-url: https://nuget.pkg.github.com/${{github.repository_owner}}/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Build solution and generate NuGet package
+        run: |
+          dotnet build vrelk.libs.sln -c Release
+          dotnet pack vrelk.libs.sln -o out --no-build
+
+      - name: Push generated package to GitHub registry
+        run: dotnet nuget push ./out/*.nupkg --skip-duplicate --source "https://nuget.pkg.github.com/${{github.repository_owner}}/index.json" --api-key ${{ secrets.GITHUB_TOKEN }}
