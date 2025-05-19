@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/vrelk/vrelk.libs</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="DB\Queries\SQL\GetOfflineDevices.mysql" />
+    <EmbeddedResource Include="DB\Queries\SQL\SearchByNameOrIP.mysql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="Dapper.Database" Version="5.0.0.258" />
+    <PackageReference Include="MySqlConnector" Version="2.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vrelk.Libs.Common\Vrelk.Libs.Common.csproj" />
+    <ProjectReference Include="..\Vrelk.Libs.IP\Vrelk.Libs.IP.csproj" />
+    <ProjectReference Include="..\Vrelk.Libs.JsonUtil\Vrelk.Libs.JsonUtil.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>
