@@ -6,7 +6,7 @@ namespace Vrelk.Libs.JsonUtil.Newtonsoft.Converters;
 /// <summary>
 /// Converter for parsing boolean values from strings (quoted true/false).
 /// </summary>
-internal class ParseBoolStringConverter : JsonConverter
+public class ParseBoolStringConverter : JsonConverter
 {
     public override bool CanConvert(Type t) => t == typeof(bool) || t == typeof(bool?);
 

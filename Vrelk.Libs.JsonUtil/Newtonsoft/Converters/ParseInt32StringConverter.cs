@@ -6,7 +6,7 @@ namespace Vrelk.Libs.JsonUtil.Newtonsoft.Converters;
 /// <summary>
 /// Converter for parsing integer values from strings (quoted integers).
 /// </summary>
-internal class ParseInt32StringConverter : JsonConverter
+public class ParseInt32StringConverter : JsonConverter
 {
     public override bool CanConvert(Type t) => t == typeof(int) || t == typeof(int?);
 

@@ -6,7 +6,7 @@ namespace Vrelk.Libs.JsonUtil.Newtonsoft.Converters;
 /// <summary>
 /// Converter for parsing long integer values from strings (quoted integers).
 /// </summary>
-internal class ParseInt64StringConverter : JsonConverter
+public class ParseInt64StringConverter : JsonConverter
 {
     public override bool CanConvert(Type t) => t == typeof(long) || t == typeof(long?);
 

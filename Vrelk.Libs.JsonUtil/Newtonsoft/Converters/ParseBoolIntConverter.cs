@@ -6,7 +6,7 @@ namespace Vrelk.Libs.JsonUtil.Newtonsoft.Converters;
 /// <summary>
 /// A JSON converter that parses integer representations of boolean values (1 for true, 0 for false) during deserialization
 /// </summary>
-internal class ParseBoolIntConverter : JsonConverter
+public class ParseBoolIntConverter : JsonConverter
 {
     public override bool CanConvert(Type t) => t == typeof(bool) || t == typeof(bool?);
 
