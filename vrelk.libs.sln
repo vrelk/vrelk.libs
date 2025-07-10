@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrelk.Libs.IP", "Vrelk.Libs
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19A39A84-0BCC-4698-80D0-487061A1F590}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
@@ -14,6 +15,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{9A73
 	ProjectSection(SolutionItems) = preProject
 		nuget.yml = nuget.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caching", "Caching\Caching.csproj", "{6CC92AC4-82D8-4BFE-99C5-6C1F4F5BE742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrelk.Libs.LibreNMS", "Vrelk.Libs.LibreNMS\Vrelk.Libs.LibreNMS.csproj", "{3A32118E-3640-43BE-8B99-70BB95E3A139}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrelk.Libs.JsonUtil", "Vrelk.Libs.JsonUtil\Vrelk.Libs.JsonUtil.csproj", "{F0C4C169-2C31-4B0B-BDF2-91A4230DC486}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrelk.Libs.Common", "Vrelk.Libs.Common\Vrelk.Libs.Common.csproj", "{B7CD6CBF-F2CF-4F43-826B-DE444F86198B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrelk.Libs.DapperExt", "Vrelk.Libs.DapperExt\Vrelk.Libs.DapperExt.csproj", "{D54EC422-95D5-4DB1-8D22-98C906E18F5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +36,26 @@ Global
 		{C7D57417-865C-49DB-AD49-1316666CCB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7D57417-865C-49DB-AD49-1316666CCB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7D57417-865C-49DB-AD49-1316666CCB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC92AC4-82D8-4BFE-99C5-6C1F4F5BE742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC92AC4-82D8-4BFE-99C5-6C1F4F5BE742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC92AC4-82D8-4BFE-99C5-6C1F4F5BE742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC92AC4-82D8-4BFE-99C5-6C1F4F5BE742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A32118E-3640-43BE-8B99-70BB95E3A139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A32118E-3640-43BE-8B99-70BB95E3A139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A32118E-3640-43BE-8B99-70BB95E3A139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A32118E-3640-43BE-8B99-70BB95E3A139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0C4C169-2C31-4B0B-BDF2-91A4230DC486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0C4C169-2C31-4B0B-BDF2-91A4230DC486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0C4C169-2C31-4B0B-BDF2-91A4230DC486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0C4C169-2C31-4B0B-BDF2-91A4230DC486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7CD6CBF-F2CF-4F43-826B-DE444F86198B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7CD6CBF-F2CF-4F43-826B-DE444F86198B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7CD6CBF-F2CF-4F43-826B-DE444F86198B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7CD6CBF-F2CF-4F43-826B-DE444F86198B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D54EC422-95D5-4DB1-8D22-98C906E18F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54EC422-95D5-4DB1-8D22-98C906E18F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54EC422-95D5-4DB1-8D22-98C906E18F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54EC422-95D5-4DB1-8D22-98C906E18F5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
