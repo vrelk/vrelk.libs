@@ -5,9 +5,31 @@ using System.Text.Json.Serialization;
 
 namespace Vrelk.Libs.JsonUtil.System.Converters;
 
-/// <summary>
-/// From quicktype.io
-/// </summary>
+/// <summary>  
+/// A custom JSON converter for serializing and deserializing <see cref="DateTimeOffset"/> objects  
+/// using ISO 8601 format. This converter supports configurable date-time styles, formats,  
+/// and culture settings, allowing precise control over how <see cref="DateTimeOffset"/> values  
+/// are represented in JSON.  
+/// </summary>  
+/// <remarks>
+/// You can configure the <see cref="DateTimeStyles"/>, <see cref="DateTimeFormat"/>,  
+/// and <see cref="Culture"/> properties to customize the serialization and deserialization behavior.  
+/// </remarks>  
+/// <example>  
+/// Example of setting a custom date-time format:  
+/// <code>  
+/// var converter = new IsoDateTimeOffsetConverter  
+/// {  
+///     DateTimeFormat = "yyyy-MM-dd HH:mm:ss",  
+///     DateTimeStyles = DateTimeStyles.AssumeUniversal,  
+///     Culture = CultureInfo.InvariantCulture  
+/// };  
+/// var options = new JsonSerializerOptions  
+/// {  
+///     Converters = { converter }  
+/// };  
+/// </code>  
+/// </example>  
 public class IsoDateTimeOffsetConverter : JsonConverter<DateTimeOffset>
 {
     public override bool CanConvert(Type t) => t == typeof(DateTimeOffset);
@@ -40,7 +62,6 @@ public class IsoDateTimeOffsetConverter : JsonConverter<DateTimeOffset>
     {
         string text;
 
-
         if ((_dateTimeStyles & DateTimeStyles.AdjustToUniversal) == DateTimeStyles.AdjustToUniversal
                 || (_dateTimeStyles & DateTimeStyles.AssumeUniversal) == DateTimeStyles.AssumeUniversal)
         {
@@ -72,7 +93,6 @@ public class IsoDateTimeOffsetConverter : JsonConverter<DateTimeOffset>
             return default(DateTimeOffset);
         }
     }
-
 
     public static readonly IsoDateTimeOffsetConverter Singleton = new IsoDateTimeOffsetConverter();
 }

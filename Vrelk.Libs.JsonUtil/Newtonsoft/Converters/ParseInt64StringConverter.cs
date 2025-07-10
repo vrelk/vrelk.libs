@@ -4,9 +4,9 @@ using System;
 namespace Vrelk.Libs.JsonUtil.Newtonsoft.Converters;
 
 /// <summary>
-/// From quicktype.io
+/// Converter for parsing long integer values from strings (quoted integers).
 /// </summary>
-public class ParseStringConverter : JsonConverter
+internal class ParseInt64StringConverter : JsonConverter
 {
     public override bool CanConvert(Type t) => t == typeof(long) || t == typeof(long?);
 
@@ -34,5 +34,5 @@ public class ParseStringConverter : JsonConverter
         return;
     }
 
-    public static readonly ParseStringConverter Singleton = new ParseStringConverter();
+    public static readonly ParseInt64StringConverter Singleton = new ParseInt64StringConverter();
 }

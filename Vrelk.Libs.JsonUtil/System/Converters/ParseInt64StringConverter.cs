@@ -4,10 +4,11 @@ using System.Text.Json.Serialization;
 
 namespace Vrelk.Libs.JsonUtil.System.Converters;
 
-/// <summary>
-/// From quicktype.io
+/// <summary>  
+/// A JSON converter that parses string representations of 64-bit integers (long) during deserialization  
+/// and serializes long values as strings.  
 /// </summary>
-public class ParseStringConverter : JsonConverter<long>
+public class ParseInt64StringConverter : JsonConverter<long>
 {
     public override bool CanConvert(Type t) => t == typeof(long);
 
@@ -27,5 +28,5 @@ public class ParseStringConverter : JsonConverter<long>
         return;
     }
 
-    public static readonly ParseStringConverter Singleton = new ParseStringConverter();
+    public static readonly ParseInt64StringConverter Singleton = new ParseInt64StringConverter();
 }
